@@ -1,15 +1,24 @@
 module.exports = {
-  purge: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
+  purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       width: {
-        'side': '23.125rem'
+        'side': '360px'
+      },
+      fontSize: {
+        'xb': '.800rem'
       }
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ['active'],
+      scale: ['active', 'group-hover']
+    },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('tailwindcss-line-clamp')
+  ],
 }
