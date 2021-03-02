@@ -1,7 +1,7 @@
-import PerfectScrollbar from 'react-perfect-scrollbar'
-import FriendList from '~/components/FriendList'
 import useSWR from 'swr'
 import Spinner from './Spinner'
+import FriendList from '~/components/FriendList'
+import PerfectScrollbar from 'react-perfect-scrollbar'
 
 function getUsers () {
   const { data, error } = useSWR(`/api/users`, (...args) => fetch(...args).then(res => res.json()))
@@ -12,7 +12,6 @@ function getUsers () {
 }
 
 export default function Layout ({ children }) {
-
   const { data, error } = getUsers()
   console.log(data)
   if (error) return <div>failed to load</div>
@@ -45,7 +44,7 @@ export default function Layout ({ children }) {
               </button>
             </div>
           </div>
-          <div className="relative py-6 flex items-center">
+          <div className="relative pt-6 pb-5 flex items-center border-b">
             <div className="absolute ml-2">
               <svg className="h-5 w-5 fill-current text-gray-500" viewBox="0 0 24 24" fill="none">
                 <path d="M16.32 14.9l1.1 1.1c.4-.02.83.13 1.14.44l3 3a1.5 1.5 0 0 1-2.12 2.12l-3-3a1.5 1.5 0 0 1-.44-1.14l-1.1-1.1a8 8 0 1 1 1.41-1.41l.01-.01zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"></path>
@@ -60,15 +59,11 @@ export default function Layout ({ children }) {
           </PerfectScrollbar>
         </div>
       </div>
-      {/* 
-        Chats `CENTER`
-      */}
+      {/* Chats `CENTER` */}
       <main>
         { children }
       </main>
-      {/* 
-        Chat files `LEFT` 
-      */}
+      {/* Chat files `LEFT` */}
       <div className="w-side flex-none border-l"></div>
     </div>
   )
