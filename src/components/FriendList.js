@@ -4,6 +4,8 @@ export default function FriendList ({ friends }) {
   if (!friends) return null
 
   return (
-    friends.map(Friend)
+    <div className="py-1">
+      { friends ? friends.map(Friend) : undefined}
+    </div>
   )
 }

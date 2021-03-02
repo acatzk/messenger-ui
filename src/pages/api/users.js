@@ -1,4 +1,4 @@
-import faker from 'faker'
+import faker from 'faker/locale/en_US'
 
 export default (req, res) => {
 
@@ -9,6 +9,8 @@ export default (req, res) => {
     let firstname = faker.name.firstName()
     let lastname = faker.name.lastName()
     let isOnline = faker.random.boolean()
+    let isSeen = faker.random.boolean()
+    let timeago = faker.date.recent()
     let lastMessage = faker.random.word()
     
     users.push({
@@ -17,8 +19,11 @@ export default (req, res) => {
       firstname,
       lastname,
       isOnline,
+      isSeen,
+      timeago,
       lastMessage
     })
+
   }
 
 
