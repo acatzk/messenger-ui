@@ -12,7 +12,7 @@ export default function Friend ({ id, avatar, firstname, lastname, isOnline, isS
         <a className="relative block hover:bg-gray-100 rounded-lg p-2 transition ease-in-out duration-100">
           <div className="flex items-center justify-between z-50">
             <div className="flex items-center justify-center space-x-3">
-              <div className="flex-shrink-0">
+              <div className="flex-shrink-0 flex items-center">
                 <LazyLoadImage className="rounded-full w-14 h-14 bg-gray-200 object-cover" 
                             effect="blur"
                             src={avatar} />
@@ -40,7 +40,7 @@ export default function Friend ({ id, avatar, firstname, lastname, isOnline, isS
               )}
             </div>
           </div>
-          <div className="flex items-center absolute inset-0 opacity-0 rounded-lg p-2 hover:opacity-100 bg-transparent">
+          <div className="flex items-center absolute inset-0 opacity-0 rounded-lg hover:opacity-100 bg-transparent">
             <button className="absolute right-8 rounded-full border shadow-sm bg-transparent bg-white focus:outline-none p-1 hover:bg-gray-100 active:bg-gray-200 transition ease-in-out duration-75 transform active:scale-95">
               <svg className="w-7 h-7 fill-current" viewBox="0 0 36 36">
                 <path d="M12.5 18A2.25 2.25 0 118 18a2.25 2.25 0 014.5 0zm7.75 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm5.5 2.25a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z"></path>
