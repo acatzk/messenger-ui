@@ -14,7 +14,7 @@ function getUsers () {
 export default function Layout ({ children }) {
   const { data, error } = getUsers()
   console.log(data)
-  if (error) return <div>failed to load</div>
+  if (error) return <div className="h-screen w-full inset-0 flex items-center justify-center text-2xl font-semibold">You are offline</div>
   if (!data) return <Spinner />
 
   return (
