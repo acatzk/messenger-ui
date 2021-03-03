@@ -23,7 +23,7 @@ export default function Layout ({ children }) {
       {/* 
         User chat list  `RIGHT`
       */}
-      <div className="w-small flex-none border-r flex flex-col flex-shrink-0 md:w-side">
+      <div className="w-small flex-none flex flex-col flex-shrink-0 md:w-side">
         <div className="px-4 pt-5 flex flex-col">
           <div className="flex items-center justify-between">
             <div className="hidden md:block">
@@ -65,11 +65,11 @@ export default function Layout ({ children }) {
         </div>
       </div>
       {/* Chats `CENTER` */}
-      <main>
+      <main className="border-r border-l">
         { children }
       </main>
       {/* Chat files `LEFT` */}
-      <div className="w-60 md:w-side flex-none border-l"></div>
+      <div className="w-60 md:w-side flex-none"></div>
     </div>
   )
 }
