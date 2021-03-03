@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       width: {
         'side': '360px',
-        'small': '5rem'
+        'small': '5.5rem'
       },
       fontSize: {
         'xb': '.800rem'
