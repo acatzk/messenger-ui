@@ -1,6 +1,7 @@
 import moment from 'moment'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { Menu } from '@headlessui/react'
 import ButtonMenu from '~/components/ButtonMenu'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 
@@ -45,9 +46,18 @@ export default function Friend ({ id, avatar, firstname, lastname, isOnline, isS
             </div>
           </div>
           <div className="hidden md:block">
-            <div className="flex items-center absolute inset-0 opacity-0 rounded-lg hover:opacity-100 bg-transparent">
-             <ButtonMenu />
-            </div>
+            <Menu>
+              <div className="flex items-center absolute inset-0 opacity-0 rounded-lg hover:opacity-100 active:opacity-100 focus:opacity-100 bg-transparent">
+                <Menu.Button className="absolute right-8 rounded-full border shadow-sm bg-transparent bg-white focus:outline-none p-1 hover:bg-gray-100 active:bg-gray-200 transition ease-in-out duration-75 transform active:scale-95">
+                  <svg className="w-7 h-7 fill-current" viewBox="0 0 36 36">
+                    <path d="M12.5 18A2.25 2.25 0 118 18a2.25 2.25 0 014.5 0zm7.75 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm5.5 2.25a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z"></path>
+                  </svg>
+                </Menu.Button>
+                <Menu.Items className="absolute top-14 left-14 bg-white h-96 z-50 w-80 focus:outline-none shadow-sm border rounded-xl px-4 py-3">
+                  this is items
+                </Menu.Items>
+              </div>
+            </Menu>
           </div>
         </a>
       </Link>
