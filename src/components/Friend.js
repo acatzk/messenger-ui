@@ -1,6 +1,5 @@
 import moment from 'moment'
 import ActiveLink from './ActiveLink'
-import { useRouter } from 'next/router'
 import { Menu } from '@headlessui/react'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 
