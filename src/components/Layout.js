@@ -1,11 +1,10 @@
 import useSWR from 'swr'
 import Spinner from './Spinner'
-import ButtonMenu from '~/components/ButtonMenu'
 import FriendList from '~/components/FriendList'
 import PerfectScrollbar from 'react-perfect-scrollbar'
 
 function getUsers () {
-  const { data, error } = useSWR(`/api/users`, (...args) => fetch(...args).then(res => res.json()))
+  const { data, error } = useSWR(`/api/users`, (query) => fetch(query).then(res => res.json()))
   return {
     data: data ? data.users : undefined,
     error
@@ -13,16 +12,14 @@ function getUsers () {
 }
 
 export default function Layout ({ children }) {
+
   const { data, error } = getUsers()
-  console.log(data)
   if (error) return <div className="h-screen w-full inset-0 flex items-center justify-center text-2xl font-semibold">You are offline</div>
   if (!data) return <Spinner />
 
   return (
     <div className="flex flex-row bg-white w-full h-screen">
-      {/* 
-        User chat list  `RIGHT`
-      */}
+      {/* User chat list  `RIGHT` */}
       <div className="w-small flex-none flex flex-col flex-shrink-0 md:w-side">
         <div className="px-4 pt-5 flex flex-col">
           <div className="flex items-center justify-between">

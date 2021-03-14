@@ -7,7 +7,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component'
 export default function Friend ({ id, avatar, firstname, lastname, isOnline, isSeen, timeago, lastMessage }) {
   return (
     <div className="px-2" key={id}>
-      <ActiveLink href={`/t/${id}`} current="bg-gray-100">
+      <ActiveLink href={`/t/${id}`} current="bg-gray-100 opacity-90">
         <a className="relative block hover:bg-gray-100 rounded-lg p-2 transition ease-in-out duration-100">
           <div className="flex items-center justify-between z-50">
             <div className="flex items-center justify-center space-x-3">
