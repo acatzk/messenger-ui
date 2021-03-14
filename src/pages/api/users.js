@@ -3,7 +3,7 @@ import faker from 'faker/locale/en_US'
 export default (req, res) => {
 
   let users = []
-  for (let id=1; id <= 20; id++) {
+  for (let id=1; id <= 10; id++) {
     let number = `${faker.random.number()}${faker.random.number()}`
     let avatar = faker.image.image()
     let firstname = faker.name.firstName()
