@@ -1,23 +1,21 @@
 import moment from 'moment'
-import Link from 'next/link'
+import ActiveLink from './ActiveLink'
 import { useRouter } from 'next/router'
 import { Menu } from '@headlessui/react'
-import ButtonMenu from '~/components/ButtonMenu'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 export default function Friend ({ id, avatar, firstname, lastname, isOnline, isSeen, timeago, lastMessage }) {
-  const router = useRouter()
-
   return (
     <div className="px-2" key={id}>
-      <Link href={`/t/${id}`}>
+      <ActiveLink href={`/t/${id}`} current="bg-gray-100">
         <a className="relative block hover:bg-gray-100 rounded-lg p-2 transition ease-in-out duration-100">
           <div className="flex items-center justify-between z-50">
             <div className="flex items-center justify-center space-x-3">
               <div className="relative flex-shrink-0 flex items-center">
-                <LazyLoadImage className="rounded-full w-14 h-14 bg-gray-200 object-cover" 
-                            effect="blur"
-                            src={avatar} />
+                <LazyLoadImage 
+                  className="rounded-full w-14 h-14 bg-gray-200 object-cover" 
+                  effect="blur"
+                  src={avatar} />
                 <div className={ isOnline ? 'w-4 h-4 absolute border-2 rounded-full border-white bg-green-active bottom-0 right-0' : '' }></div>
               </div>
               <div className="text-sm hidden md:block">
@@ -60,7 +58,7 @@ export default function Friend ({ id, avatar, firstname, lastname, isOnline, isS
             </Menu>
           </div>
         </a>
-      </Link>
+      </ActiveLink>
     </div>
   )
 }
