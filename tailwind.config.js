@@ -12,7 +12,9 @@ module.exports = {
         'xb': '.800rem'
       },
       colors: {
-        'green-active': '#5ad539'
+        'green-active': '#5ad539',
+        'blue-primary': '#0099FF',
+        'blue-secondary': '#CCEBFF'
       },
       animation: {
         pulse: 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite'
@@ -26,7 +28,8 @@ module.exports = {
             opacity: 1
           }
         }
-      }
+      },
+      backgroundColor: ['active']
     }
   },
   variants: {
