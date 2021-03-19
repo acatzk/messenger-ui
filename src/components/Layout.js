@@ -19,6 +19,7 @@ export default function Layout ({ children }) {
   if (error) return <div className="h-screen w-full inset-0 flex items-center justify-center text-2xl font-semibold">You are offline</div>
   if (!data) return <Spinner />
 
+  let avatar = 'https://scontent.fdvo1-1.fna.fbcdn.net/v/t1.0-1/p100x100/136052751_3626317947451594_7571457885337414921_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=7206a8&_nc_eui2=AeGuhFFXJNPJYQPRNdenYcwk0qXfB90axAXSpd8H3RrEBUs6m2qTHd_xBYGc8r7vjrRXTmMkIibwU4fS-3YlGcX_&_nc_ohc=7PRaWyth3boAX820l85&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fdvo1-1.fna&tp=6&oh=f6bf63ad0ef3673838f64cf10c8996ed&oe=607B5451'
   let chatFileList = [
     { 
       title: 'Customize Chat', 
@@ -128,16 +129,16 @@ export default function Layout ({ children }) {
         { children }
       </main>
       {/* Chat files `LEFT` */}
-      <div className="w-60 md:w-left-side flex-none overflow-y-auto">
+      <div className="w-60 md:w-left-side flex-none overflow-y-auto hidden md:block">
         <PerfectScrollbar>
           <div className="flex flex-col items-center justify-center space-y-2.5 pt-4 pb-2">
             <div className="relative flex-shrink-0">
-              <img className="rounded-full w-20 h-20" src="https://scontent.fceb1-1.fna.fbcdn.net/v/t1.0-1/p100x100/117578597_2717832615127030_4153142513833495842_o.jpg?_nc_cat=101&ccb=1-3&_nc_sid=7206a8&_nc_eui2=AeFRzgMRjM375f0y34wLJQesRePFjIX92r9F48WMhf3av0ThPawAppBFtBIXMpqG2shVaOwI2cvTW3c_RMss772R&_nc_ohc=nyolbEGfOEoAX_2phqR&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fceb1-1.fna&tp=6&oh=ee46ecc71ed00520c8d1ea03954ce152&oe=6073229A" />
+              <img className="rounded-full w-20 h-20" src={avatar} />
               <span className="absolute w-4 h-4 rounded-full border-2 border-white bottom-1 right-0 bg-gren bg-green-active"></span>
             </div>
             <div className="flex flex-col space-y-1.5 text-center">
-              <a className="font-semibold text-base hover:underline tracking-wide">Joseftt Beronio</a>
-              <p className="text-gray-500 text-sm">Active 3m ago</p>
+              <a className="font-semibold text-base hover:underline tracking-wide">Gilfrost Calunia</a>
+              <p className="text-gray-500 text-sm">Active 17m ago</p>
             </div>
           </div>
           {chatFileList.map((c, i) => <Dropdown key={i} {...c} />)}
@@ -160,7 +161,7 @@ function Dropdown ({ title, isOpen, list, images }) {
       <div className="px-2">
         <button 
           onClick={toggleDropdown}
-          className="flex items-center justify-between w-full px-2 py-2.5 font-semibold rounded-lg focus:outline-none hover:bg-gray-100 opacity-90 transition ease-in-out duration-150"
+          className="flex items-center justify-between w-full px-2 py-2.5 font-semibold rounded-lg focus:outline-none active:bg-gray-200 hover:bg-gray-100 opacity-90 transition ease-in-out duration-150"
         >
           <span>{title}</span>
           <span>
@@ -180,7 +181,7 @@ function Dropdown ({ title, isOpen, list, images }) {
           {list && (
             list.map(({ icon, description, text }, i) => (
               <li key={i} className="px-2">
-                <button type="button" className="flex space-x-3 items-center w-full px-2 py-2.5 rounded-lg focus:outline-none hover:bg-gray-100 opacity-90 transition ease-in-out duration-150">
+                <button type="button" className="flex space-x-3 items-center w-full px-2 py-2.5 rounded-lg focus:outline-none active:bg-gray-200 hover:bg-gray-100 opacity-90 transition ease-in-out duration-150">
                   <span>
                     {icon}
                   </span>
