@@ -1,9 +1,8 @@
 import useSWR from 'swr'
-import Spinner from './Spinner'
-import { useState, useCallback } from 'react'
+import Spinner from '~/components/Spinner'
 import FriendList from '~/components/FriendList'
+import FileDropdown from '~/components/FileDropdown'
 import PerfectScrollbar from 'react-perfect-scrollbar'
-import { Gallery, Item } from 'react-photoswipe-gallery'
 
 function getUsers () {
   const { data, error } = useSWR(`/api/users`, (query) => fetch(query).then(res => res.json()))
@@ -13,7 +12,7 @@ function getUsers () {
   }
 }
 
-export default function Layout ({ children }) {
+export default function DefaultLayout ({ children }) {
 
   const { data, error } = getUsers()
   if (error) return <div className="h-screen w-full inset-0 flex items-center justify-center text-2xl font-semibold">You are offline</div>
@@ -64,6 +63,15 @@ export default function Layout ({ children }) {
           description: 'Give feedback and report the conversation',
           icon: <WarningIcon />
         },
+      ]
+    },
+    {
+      title: 'Shared Files',
+      isOpen: false,
+      files: [
+        {
+          fileName: 'WindowsFormsApplication1.sln'
+        }
       ]
     },
     {
@@ -141,80 +149,9 @@ export default function Layout ({ children }) {
               <p className="text-gray-500 text-sm">Active 17m ago</p>
             </div>
           </div>
-          {chatFileList.map((c, i) => <Dropdown key={i} {...c} />)}
+          {chatFileList.map((c, i) => <FileDropdown key={i} {...c} />)}
         </PerfectScrollbar>
       </div>
-    </div>
-  )
-}
-
-function Dropdown ({ title, isOpen, list, images }) {
-
-  const [isDropdown, setDropdown] = useState(isOpen)
-
-  const toggleDropdown = useCallback(() => {
-    setDropdown(v => !v)
-  }, [])
-
-  return (
-    <div className="relative text-sm">
-      <div className="px-2">
-        <button 
-          onClick={toggleDropdown}
-          className="flex items-center justify-between w-full px-2 py-2.5 font-semibold rounded-lg focus:outline-none active:bg-gray-200 hover:bg-gray-100 opacity-90 transition ease-in-out duration-150"
-        >
-          <span>{title}</span>
-          <span>
-            <svg 
-              className="w-6 h-6 fill-current text-gray-600" 
-              fill="currentColor" 
-              viewBox="0 0 20 20" 
-              xmlns="http://www.w3.org/2000/svg">
-              { !isDropdown ? <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"></path> 
-                        : <path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd"></path> }
-            </svg>
-          </span>
-        </button>
-      </div>
-      {isDropdown && (
-        <ul className="overflow-hidden">
-          {list && (
-            list.map(({ icon, description, text }, i) => (
-              <li key={i} className="px-2">
-                <button type="button" className="flex space-x-3 items-center w-full px-2 py-2.5 rounded-lg focus:outline-none active:bg-gray-200 hover:bg-gray-100 opacity-90 transition ease-in-out duration-150">
-                  <span>
-                    {icon}
-                  </span>
-                  <div className="flex flex-col items-start">
-                    <span className="font-medium">{ text }</span>
-                    {description && <p className="text-xs text-gray-500">{ description }</p>}
-                  </div>
-                </button>
-              </li>
-            ))
-          )}
-          {images && (
-            <div className="absolute w-full">
-              <div className="grid grid-cols-3 gap-1">
-                {images.map((image, i) => (
-                  <Gallery key={i}>
-                    <Item
-                      original={image}
-                      thumbnail={image}
-                      width="1024"
-                      height="768"
-                    >
-                      {({ ref, open }) => (
-                        <img className="w-full" ref={ref} onClick={open} src={image} />
-                      )}
-                    </Item>
-                  </Gallery>
-                ))}
-              </div>
-            </div>
-          )}
-        </ul>
-      )}
     </div>
   )
 }
