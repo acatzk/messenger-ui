@@ -24,6 +24,7 @@
     "tailwindcss-line-clamp": "^1.0.5"
   },
   "devDependencies": {
+    "@tailwindcss/jit": "^0.1.4",
     "autoprefixer": "^10.2.4",
     "postcss": "^8.2.6",
     "tailwindcss": "^2.0.3"
