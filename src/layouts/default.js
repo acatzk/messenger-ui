@@ -1,5 +1,5 @@
 import useSWR from 'swr'
-import Spinner from './Spinner'
+import Spinner from '~/components/Spinner'
 import { useState, useCallback } from 'react'
 import FriendList from '~/components/FriendList'
 import PerfectScrollbar from 'react-perfect-scrollbar'
@@ -13,7 +13,7 @@ function getUsers () {
   }
 }
 
-export default function Layout ({ children }) {
+export default function DefaultLayout ({ children }) {
 
   const { data, error } = getUsers()
   if (error) return <div className="h-screen w-full inset-0 flex items-center justify-center text-2xl font-semibold">You are offline</div>

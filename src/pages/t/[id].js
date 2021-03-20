@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Layout from '~/components/Layout'
+import DefaultLayout from '~/layouts/default'
 
 export default function Chat () {
   let avatar = 'https://scontent.fdvo1-1.fna.fbcdn.net/v/t1.0-1/p100x100/136052751_3626317947451594_7571457885337414921_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=7206a8&_nc_eui2=AeGuhFFXJNPJYQPRNdenYcwk0qXfB90axAXSpd8H3RrEBUs6m2qTHd_xBYGc8r7vjrRXTmMkIibwU4fS-3YlGcX_&_nc_ohc=7PRaWyth3boAX820l85&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fdvo1-1.fna&tp=6&oh=f6bf63ad0ef3673838f64cf10c8996ed&oe=607B5451'
@@ -8,7 +8,7 @@ export default function Chat () {
       <Head>
         <title>Messenger</title>
       </Head>
-      <Layout>
+      <DefaultLayout>
         <div className="flex flex-col justify-between h-full">
           <div className="flex items-center justify-between h-16 flex-none shadow px-4">
             <div className="flex items-center space-x-3">
@@ -49,7 +49,7 @@ export default function Chat () {
             
           </div>
         </div>
-      </Layout>
+      </DefaultLayout>
     </>
   )
 }

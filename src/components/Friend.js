@@ -1,7 +1,6 @@
 import moment from 'moment'
 import ActiveLink from './ActiveLink'
 import { Menu } from '@headlessui/react'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 export default function Friend ({ id, avatar, firstname, lastname, isOnline, isSeen, timeago, lastMessage }) {
   return (
@@ -11,10 +10,7 @@ export default function Friend ({ id, avatar, firstname, lastname, isOnline, isS
           <div className="flex items-center justify-between z-50">
             <div className="flex items-center justify-center space-x-3">
               <div className="relative flex-shrink-0 flex items-center">
-                <LazyLoadImage 
-                  className="rounded-full w-14 h-14 bg-gray-200 object-cover" 
-                  effect="blur"
-                  src={avatar} />
+                <img className="rounded-full w-14 h-14 object-cover border bg-white" src={avatar} />
                 <div className={ isOnline ? 'w-4 h-4 absolute border-2 rounded-full border-white bg-green-active bottom-0 right-0' : '' }></div>
               </div>
               <div className="text-sm hidden md:block">
@@ -33,10 +29,7 @@ export default function Friend ({ id, avatar, firstname, lastname, isOnline, isS
                   </div>
                 ) : (
                   <div className="flex items-center pr-1">
-                    <LazyLoadImage 
-                      className="w-3.5 h-3.5 rounded-full fill-current"  
-                      effect="blur"
-                      src={avatar} />
+                    <img className="w-3.5 h-3.5 rounded-full border bg-white fill-current" src={avatar} />
                   </div>
                 )}
               </div>
