@@ -18,7 +18,7 @@ export default function DefaultLayout ({ children }) {
   if (error) return <div className="h-screen w-full inset-0 flex items-center justify-center text-2xl font-semibold">You are offline</div>
   if (!data) return <Spinner />
 
-  let avatar = 'https://scontent.fdvo1-1.fna.fbcdn.net/v/t1.0-1/p100x100/136052751_3626317947451594_7571457885337414921_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=7206a8&_nc_eui2=AeGuhFFXJNPJYQPRNdenYcwk0qXfB90axAXSpd8H3RrEBUs6m2qTHd_xBYGc8r7vjrRXTmMkIibwU4fS-3YlGcX_&_nc_ohc=7PRaWyth3boAX820l85&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fdvo1-1.fna&tp=6&oh=f6bf63ad0ef3673838f64cf10c8996ed&oe=607B5451'
+  let avatar = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuHcntaJPW9u5zhUSyuyPagrt3oGsb8rZjRw&usqp=CAU'
   let chatFileList = [
     { 
       title: 'Customize Chat', 
@@ -89,7 +89,7 @@ export default function DefaultLayout ({ children }) {
   ]
 
   return (
-    <div className="flex flex-row bg-white w-full h-screen">
+    <div className="font-sans flex flex-row bg-white w-full h-screen">
       {/* User chat list  `RIGHT` */}
       <div className="w-small flex-none flex flex-col flex-shrink-0 md:w-side">
         <div className="px-4 pt-5 flex flex-col">
@@ -97,7 +97,7 @@ export default function DefaultLayout ({ children }) {
             <div className="hidden md:block">
               <div className="flex flex-row items-center space-x-3">
                 <div className="flex-shrink-0">
-                  <img className="rounded-full w-9 h-9" src="https://scontent.fdvo1-1.fna.fbcdn.net/v/t1.0-1/p100x100/150192462_3644496232338846_4386767672745445544_n.jpg?_nc_cat=104&ccb=3&_nc_sid=7206a8&_nc_eui2=AeGXlBsmkZpd9QkCNhFLCifBWmNBZpaWS0NaY0FmlpZLQzuo09l6TV2yUY6WWSVm3XRnA5rilGhc15h-HtxBN-_I&_nc_ohc=aiO1YXiI30oAX_3oHop&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fdvo1-1.fna&tp=6&oh=78e1a53774b6280e4854ac7883910009&oe=60610979"/>
+                  <img className="rounded-full w-9 h-9" src="https://4.img-dpreview.com/files/p/E~TS590x0~articles/3925134721/0266554465.jpeg"/>
                 </div>
                 <span className="text-2xl font-bold pt-0.5">Chats</span>
               </div>

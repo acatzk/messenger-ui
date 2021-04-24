@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   purge: [
     './public/**/*.html',
@@ -32,7 +34,9 @@ module.exports = {
           }
         }
       },
-      backgroundColor: ['active']
+      fontFamily: {
+        sans: ['Helvetica', ...defaultTheme.fontFamily.sans]
+      }
     }
   },
   variants: {
