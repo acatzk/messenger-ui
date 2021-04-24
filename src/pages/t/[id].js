@@ -2,7 +2,7 @@ import Head from 'next/head'
 import DefaultLayout from '~/layouts/default'
 
 export default function Chat () {
-  let avatar = 'https://scontent.fdvo1-1.fna.fbcdn.net/v/t1.0-1/p100x100/136052751_3626317947451594_7571457885337414921_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=7206a8&_nc_eui2=AeGuhFFXJNPJYQPRNdenYcwk0qXfB90axAXSpd8H3RrEBUs6m2qTHd_xBYGc8r7vjrRXTmMkIibwU4fS-3YlGcX_&_nc_ohc=7PRaWyth3boAX820l85&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fdvo1-1.fna&tp=6&oh=f6bf63ad0ef3673838f64cf10c8996ed&oe=607B5451'
+  let avatar = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuHcntaJPW9u5zhUSyuyPagrt3oGsb8rZjRw&usqp=CAU'
   return (
     <>
       <Head>
@@ -42,8 +42,26 @@ export default function Chat () {
               </div>
             </div>
           </div>
-          <div className="overflow-y-auto px-4 flex-1">
-            Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor. Et voluptate magna est dolore commodo voluptate enim. Tempor cupidatat nisi minim eu.Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor. Et voluptate magna est dolore commodo voluptate enim. Tempor cupidatat nisi minim eu.Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor. Et voluptate magna est dolore commodo voluptate enim. Tempor cupidatat nisi minim eu.Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor. Et voluptate magna est dolore commodo voluptate enim. Tempor cupidatat nisi minim eu.Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor. Et voluptate magna est dolore commodo voluptate enim. Tempor cupidatat nisi minim eu.Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor. Et voluptate magna est dolore commodo voluptate enim. Tempor cupidatat nisi minim eu.Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor. Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor. Et voluptate magna est dolore commodo voluptate enim. Tempor cupidatat nisi minim eu.Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor. Et voluptate magna est dolore commodo voluptate enim. Tempor cupidatat nisi minim eu.Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor. Et voluptate magna est dolore commodo voluptate enim. Tempor cupidatat nisi minim eu.Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor. Et voluptate magna est dolore commodo voluptate enim. Tempor cupidatat nisi minim eu.Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor. Et voluptate magna est dolore commodo voluptate enim. Tempor cupidatat nisi minim eu.Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor. Et voluptate magna est dolore commodo voluptate enim. Tempor cupidatat nisi minim eu.Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor.Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor. Et voluptate magna est dolore commodo voluptate enim. Tempor cupidatat nisi minim eu.Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor. Et voluptate magna est dolore commodo voluptate enim. Tempor cupidatat nisi minim eu.Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor. Et voluptate magna est dolore commodo voluptate enim. Tempor cupidatat nisi minim eu.Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor. Et voluptate magna est dolore commodo voluptate enim. Tempor cupidatat nisi minim eu.Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor. Et voluptate magna est dolore commodo voluptate enim. Tempor cupidatat nisi minim eu.Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor. Et voluptate magna est dolore commodo voluptate enim. Tempor cupidatat nisi minim eu.Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor. Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor. Et voluptate magna est dolore commodo voluptate enim. Tempor cupidatat nisi minim eu.Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor. Et voluptate magna est dolore commodo voluptate enim. Tempor cupidatat nisi minim eu.Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor. Et voluptate magna est dolore commodo voluptate enim. Tempor cupidatat nisi minim eu.Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor. Et voluptate magna est dolore commodo voluptate enim. Tempor cupidatat nisi minim eu.Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor. Et voluptate magna est dolore commodo voluptate enim. Tempor cupidatat nisi minim eu.Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor. Et voluptate magna est dolore commodo voluptate enim. Tempor cupidatat nisi minim eu.Consequat magna eu deserunt voluptate laborum aliqua qui cillum voluptate commodo sint duis. Officia adipisicing non eiusmod in eiusmod nostrud ipsum ad cillum eiusmod do do tempor.
+          <div className="overflow-y-auto pr-4 pl-2 py-4 flex-1 space-y-2 w-full">
+            <span>Labore irure non non quis tempor incididunt esse sit deserunt sunt eiusmod cupidatat sint proident. Do amet eu aliqua velit sunt mollit in amet labore voluptate nulla minim. Elit duis irure do magna. Cillum irure ex occaecat velit cillum eu reprehenderit laboris excepteur id occaecat proident commodo.</span>
+            <div className="flex items-center space-x-2">
+              <div className="flex-shrink-0">
+                <img className="w-6 h-6 rounded-full border" src={avatar} />
+              </div>
+              <div className="flex items-center">
+                <p className="rounded-full px-3 py-2 bg-gray-200 w-full max-w-sm">
+                  Ingnaa sila hahahaha
+                </p>
+                <div className="flex items-center text-gray-200 opacity-0 hover:opacity-100 w-full">
+                  <button className="focus:outline-none">
+                    <svg class="w-6 h-6 fill-current" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div className="flex items-center h-14 bg-white flex-none px-2 space-x-1">
             <div className="flex items-center space-x-1">
@@ -60,14 +78,14 @@ export default function Chat () {
                 <GifIcon />
               </button>
             </div>
-            <div className="relative flex-1 flex items-center justify-items-end">
+            <form className="relative flex-1 flex items-center justify-items-end">
               <input type="text" placeholder="Aa" className="py-1.5 px-4 w-full rounded-full bg-gray-100 focus:ring-0 border-none" />
               <div className="absolute right-0 flex items-center">
                 <button className="focus:outline-none rounded-full p-1 hover:bg-gray-200">
                   <EmojiIcon />
                 </button>
               </div>
-            </div>
+            </form>
             <div className="flex items-center">
               <button className="focus:outline-none rounded-full p-2 hover:bg-gray-100">
                 <LikeIcon />
